@@ -7,6 +7,7 @@ import GameBanner from '../GameBanner'
 import { MultiChainBanner } from '../MultichainBanner'
 import { NemesisDownfallBanner } from '../NemesisDownfallBanner'
 import NewIFOBanner from '../NewIFOBanner'
+import { OptionsBanner } from '../OptionsBanner'
 import PerpetualBanner from '../PerpetualBanner'
 import { TopTraderBanner } from '../TopTraderBanner'
 import UserBanner from '../UserBanner'
@@ -48,6 +49,10 @@ export const useMultipleBannerConfig = () => {
         banner: <UserBanner />,
       },
       { shouldRender: isRenderIFOBanner || Boolean(countdown), banner: <NewIFOBanner /> },
+      {
+        shouldRender: true,
+        banner: <OptionsBanner />,
+      },
       {
         shouldRender: true,
         banner: <MultiChainBanner />,
