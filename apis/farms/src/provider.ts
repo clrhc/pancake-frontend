@@ -25,6 +25,7 @@ const requireCheck = [
   BASE_NODE,
   OPBNB_NODE,
   OPBNB_TESTNET_NODE,
+  ETHERLINK_TESTNET_NODE,
   NODE_REAL_SUBGRAPH_API_KEY,
 ]
 
@@ -107,6 +108,40 @@ const linea = {
     },
   },
   testnet: false,
+} as const
+
+const etherlinkTestnet = {
+  id: 128_123,
+  name: 'Etherlink Testnet',
+  network: 'etherlink-testnet',
+  nativeCurrency: { name: 'Etherlink Testnet', symbol: 'XTZ', decimals: 18 },
+  rpcUrls: {
+    default: {
+      http: ['https://rpc.linea.build'],
+      webSocket: ['wss://rpc.linea.build'],
+    },
+    public: {
+      http: ['https://rpc.linea.build'],
+      webSocket: ['wss://rpc.linea.build'],
+    },
+  },
+  blockExplorers: {
+    default: {
+      name: 'Etherlink Testnet Explorer',
+      url: 'https://testnet-explorer.etherlink.com/',
+    },
+    etherscan: {
+      name: 'Etherlink Testnet Explorer',
+      url: 'https://testnet-explorer.etherlink.com/',
+    },
+  },
+  contracts: {
+    multicall3: {
+      address: '0xcA11bde05977b3631167028862bE2a173976CA11',
+      blockCreated: 220050,
+    },
+  },
+  testnet: true,
 } as const
 
 requireCheck.forEach((node) => {
@@ -265,6 +300,17 @@ const opBNBTestnetClient = createPublicClient({
   },
 })
 
+const etherlinkTestnetClient = createPublicClient({
+  chain: etherlinkTestnet,
+  transport: http(ETHERLINK_TESTNET_NODE),
+  batch: {
+    multicall: {
+      batchSize: 1024 * 200,
+      wait: 16,
+    },
+  },
+})
+
 export const viemProviders = ({ chainId }: { chainId?: ChainId }): PublicClient => {
   switch (chainId) {
     case ChainId.ETHEREUM:
@@ -291,6 +337,8 @@ export const viemProviders = ({ chainId }: { chainId?: ChainId }): PublicClient 
       return opBNBClient
     case ChainId.OPBNB_TESTNET:
       return opBNBTestnetClient
+    case ChainId.ETHERLINK_TESTNET:
+      return etherlinkTestnetClient
     default:
       return bscClient
   }

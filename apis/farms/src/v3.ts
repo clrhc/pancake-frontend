@@ -25,6 +25,7 @@ export const V3_SUBGRAPH_CLIENTS_CHAIN_IDS = [
   ChainId.LINEA,
   ChainId.BASE,
   ChainId.OPBNB,
+  ChainId.ETHERLINK_TESTNET,
 ] as const
 
 type SupportChainId = (typeof V3_SUBGRAPH_CLIENTS_CHAIN_IDS)[number]
