@@ -6,6 +6,7 @@ import FarmsGoerliPriceHelper from './5'
 import FarmsArbitrumHelper from './42161'
 import FarmsLineaHelper from './59144'
 import FarmsBaseHelper from './8453'
+import FarmsEtherlinkHelper from './128123'
 
 export const getFarmsPriceHelperLpFiles = (chainId: ChainId) => {
   switch (chainId) {
@@ -23,6 +24,8 @@ export const getFarmsPriceHelperLpFiles = (chainId: ChainId) => {
       return FarmsLineaHelper
     case ChainId.BASE:
       return FarmsBaseHelper
+    case ChainId.ETHERLINK_TESTNET:
+      return FarmsEtherlinkHelper
     default:
       return []
   }

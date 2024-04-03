@@ -238,6 +238,15 @@ export const CAKE = {
   ),
 }
 
+export const EUSD = {
+  [ChainId.ETHERLINK_TESTNET]: new ERC20Token(
+    ChainId.ETHERLINK_TESTNET,
+    '0x1A71f491fb0Ef77F13F8f6d2a927dd4C969ECe4f',
+    18,
+    'eUSD',
+    'Etherlink USD')
+}
+
 export const USDC = {
   [ChainId.BSC]: USDC_BSC,
   [ChainId.BSC_TESTNET]: USDC_TESTNET,
@@ -402,4 +411,5 @@ export const STABLE_COIN = {
   [ChainId.SEPOLIA]: USDC[ChainId.SEPOLIA],
   [ChainId.ARBITRUM_SEPOLIA]: USDC[ChainId.ARBITRUM_SEPOLIA],
   [ChainId.BASE_SEPOLIA]: USDC[ChainId.BASE_SEPOLIA],
+  [ChainId.ETHERLINK_TESTNET]: EUSD[ChainId.ETHERLINK_TESTNET],
 } satisfies Record<ChainId, ERC20Token>

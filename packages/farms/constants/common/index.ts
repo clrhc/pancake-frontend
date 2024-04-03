@@ -12,6 +12,7 @@ import {
   polygonZkEvmTokens,
   zkSyncTestnetTokens,
   zksyncTokens,
+  etherlinkTestnetTokens,
 } from '@pancakeswap/tokens'
 import type { FarmV3SupportedChainId } from '../../src'
 import type { CommonPrice } from '../../src/fetchFarmsV3'
@@ -56,6 +57,10 @@ export const priceHelperTokens = {
     chain: 'opbnb',
     list: [opBnbTokens.wbnb, opBnbTokens.usdt],
   },
+  [ChainId.ETHERLINK_TESTNET]:{
+    chain: 'etherlink',
+    list: [etherlinkTestnetTokens.xtz, etherlinkTestnetTokens.wxtz, etherlinkTestnetTokens.eusd, etherlinkTestnetTokens.usdt, etherlinkTestnetTokens.ign, etherlinkTestnetTokens.usdc, etherlinkTestnetTokens.tzbtc],
+  },
 } satisfies Record<number, PriceHelper>
 
 // for testing purposes
@@ -82,4 +87,5 @@ export const DEFAULT_COMMON_PRICE: Record<FarmV3SupportedChainId, CommonPrice> =
   [ChainId.BASE]: {},
   [ChainId.OPBNB_TESTNET]: {},
   [ChainId.OPBNB]: {},
+  [ChainId.ETHERLINK_TESTNET]: {},
 }

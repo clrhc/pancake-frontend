@@ -162,6 +162,7 @@ const SHORT_SYMBOL = {
   [ChainId.SEPOLIA]: 'sepolia',
   [ChainId.BASE_SEPOLIA]: 'Base Sepolia',
   [ChainId.ARBITRUM_SEPOLIA]: 'Arb Sepolia',
+  [ChainId.ETHERLINK_TESTNET]: 'Etherlink Testnet',
 } as const satisfies Record<ChainId, string>
 
 export const NetworkSwitcher = () => {

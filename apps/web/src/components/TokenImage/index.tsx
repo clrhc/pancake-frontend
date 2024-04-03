@@ -22,6 +22,7 @@ export const tokenImageChainNameMapping = {
   [ChainId.LINEA]: 'linea/',
   [ChainId.BASE]: 'base/',
   [ChainId.OPBNB]: 'opbnb/',
+  [ChainId.ETHERLINK_TESTNET]: 'etherlink/',
 }
 
 export const getImageUrlFromToken = (token: Token) => {

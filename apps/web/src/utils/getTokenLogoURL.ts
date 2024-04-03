@@ -11,6 +11,7 @@ const mapping = {
   [ChainId.ZKSYNC]: 'zksync',
   [ChainId.ARBITRUM_ONE]: 'arbitrum',
   [ChainId.LINEA]: 'linea',
+  [ChainId.ETHERLINK_TESTNET]: 'etherlink',
 }
 
 const getTokenLogoURL = memoize(
