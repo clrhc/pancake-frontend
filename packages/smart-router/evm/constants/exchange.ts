@@ -24,6 +24,7 @@ import {
   sepoliaTokens,
   zkSyncTestnetTokens,
   zksyncTokens,
+  etherlinkTestnetTokens,
 } from '@pancakeswap/tokens'
 
 import { ChainMap, ChainTokenList } from '../types'
