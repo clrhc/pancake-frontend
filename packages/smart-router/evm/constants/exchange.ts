@@ -98,6 +98,7 @@ export const STABLE_SWAP_INFO_ADDRESS: ChainMap<string> = {
   [ChainId.SEPOLIA]: '',
   [ChainId.ARBITRUM_SEPOLIA]: '',
   [ChainId.BASE_SEPOLIA]: '',
+  [ChainId.ETHERLINK_TESTNET]: '',
 }
 
 // used to construct intermediary pairs for trading
