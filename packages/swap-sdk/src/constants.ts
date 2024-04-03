@@ -81,6 +81,14 @@ export const WETH9 = {
     'Wrapped Ether',
     'https://weth.io'
   ),
+  [ChainId.ETHERLINK_TESTNET]: new ERC20Token(
+    ChainId.ETHERLINK_TESTNET,
+    '0x8DEF68408Bc96553003094180E5C90d9fe5b88C1',
+    18,
+    'WETH',
+    'Wrapped Ether',
+    'https://weth.io'
+  ),
   [ChainId.GOERLI]: new ERC20Token(
     ChainId.GOERLI,
     '0xB4FBF271143F4FBf7B91A5ded31805e42b2208d6',
