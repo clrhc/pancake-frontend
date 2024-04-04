@@ -257,6 +257,6 @@ export const onRampCurrenciesMap: { [tokenSymbol: string]: Currency } = {
   USDC_8453: baseTokens.usdc,
   DAI_1: ethereumTokens.dai,
   WBTC_1: ethereumTokens.wbtc,
-  etherlinkTestnetTokens.usdt,
+  USDT_128123: etherlinkTestnetTokens.usdt,
   // 'USDC.e_42161': arbitrumTokens.usdce,
 }
