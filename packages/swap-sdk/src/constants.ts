@@ -83,11 +83,11 @@ export const WETH9 = {
   ),
   [ChainId.ETHERLINK_TESTNET]: new ERC20Token(
     ChainId.ETHERLINK_TESTNET,
-    '0x8DEF68408Bc96553003094180E5C90d9fe5b88C1',
+    '0xB1Ea698633d57705e93b0E40c1077d46CD6A51d8',
     18,
-    'WETH',
-    'Wrapped Ether',
-    'https://weth.io'
+    'WXTZ',
+    'Wrapped XTZ',
+    'https://iguanadex.com'
   ),
   [ChainId.GOERLI]: new ERC20Token(
     ChainId.GOERLI,
@@ -307,7 +307,7 @@ export const WNATIVE = {
   [ChainId.SEPOLIA]: WETH9[ChainId.SEPOLIA],
   [ChainId.ARBITRUM_SEPOLIA]: WETH9[ChainId.ARBITRUM_SEPOLIA],
   [ChainId.BASE_SEPOLIA]: WETH9[ChainId.BASE_SEPOLIA],
-  [ChainId.ETHERLINK_TESTNET]: WXTZ[ChainId.ETHERLINK_TESTNET],
+  [ChainId.ETHERLINK_TESTNET]: WETH9[ChainId.ETHERLINK_TESTNET],
 } satisfies Record<ChainId, ERC20Token>
 
 const ETHER = { name: 'Ether', symbol: 'ETH', decimals: 18 } as const
