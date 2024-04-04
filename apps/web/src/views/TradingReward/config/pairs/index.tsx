@@ -19,7 +19,7 @@ import { tradingRewardBscV3Pair } from './edgeCasesFarms/bscFarm'
 import { tradingRewardLineaV3Pair } from './edgeCasesFarms/lineaFarm'
 import { tradingRewardZkEvmV3Pair } from './edgeCasesFarms/zkEVMFarm'
 import { tradingRewardZkSyncV3Pair } from './edgeCasesFarms/zkSyncFarm'
-import { tradingRewardEtherlinkV3Pair } from './edgeCasesFarms/etherlinkTestnetFarm'
+import { tradingRewardEtherlinkTestnetV3Pair } from './edgeCasesFarms/etherlinkTestnetFarm'
 
 export const tradingRewardPairConfigChainMap: Record<FarmV3SupportedChainId, ComputedFarmConfigV3[]> = {
   [ChainId.ETHEREUM]: ethFarm,
