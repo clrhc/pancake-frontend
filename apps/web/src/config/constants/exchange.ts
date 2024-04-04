@@ -22,6 +22,7 @@ import {
   scrollSepoliaTokens,
   zkSyncTestnetTokens,
   zksyncTokens,
+  etherlinkTestnetTokens,
 } from '@pancakeswap/tokens'
 import { ChainTokenList } from './types'
 
