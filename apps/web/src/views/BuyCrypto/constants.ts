@@ -1,6 +1,6 @@
 import { Native } from '@pancakeswap/sdk'
 import { Currency } from '@pancakeswap/swap-sdk-core'
-import { arbitrumTokens, baseTokens, bscTokens, ethereumTokens, lineaTokens } from '@pancakeswap/tokens'
+import { arbitrumTokens, baseTokens, bscTokens, ethereumTokens, lineaTokens, etherlinkTestnetTokens } from '@pancakeswap/tokens'
 import { NativeBtc } from './utils/NativeBtc'
 
 export const SUPPORTED_ONRAMP_TOKENS = ['ETH', 'DAI', 'USDT', 'USDC', 'BUSD', 'BNB', 'WBTC']
@@ -28,6 +28,7 @@ export enum OnRampChainId {
   BASE_SEPOLIA = 84532,
   SEPOLIA = 11155111,
   BTC = 0,
+  ETHERLINK_TESTNET = 128123,
 }
 export enum ONRAMP_PROVIDERS {
   MoonPay = 'MoonPay',
@@ -74,6 +75,8 @@ export const getNetworkDisplay = (chainId: number | undefined): string => {
       return 'base'
     case OnRampChainId.BTC:
       return 'bitcoin'
+    case OnRampChainId.ETHERLINK_TESTNET:
+      return 'etherlink'
     default:
       return ''
   }
@@ -97,6 +100,8 @@ export const getNetworkFullName = (chainId: number | undefined): string => {
       return 'Base Mainnet'
     case OnRampChainId.BTC:
       return 'Bitcoin Network'
+    case OnRampChainId.ETHERLINK_TESTNET:
+      return 'Etherlink'
     default:
       return ''
   }
@@ -111,6 +116,7 @@ export const chainIdToMercuryoNetworkId: { [id: number]: string } = {
   [OnRampChainId.LINEA]: 'LINEA',
   [OnRampChainId.BASE]: 'BASE',
   [OnRampChainId.BTC]: 'BITCOIN',
+  [OnRampChainId.ETHERLINK_TESTNET]: 'Etherlink',
 }
 
 export const chainIdToMoonPayNetworkId: { [id: number]: string } = {
@@ -122,6 +128,7 @@ export const chainIdToMoonPayNetworkId: { [id: number]: string } = {
   [OnRampChainId.LINEA]: '_linea',
   [OnRampChainId.BASE]: '_base',
   [OnRampChainId.BTC]: '',
+  [OnRampChainId.ETHERLINK_TESTNET]: 'Etherlink',
 }
 
 export const chainIdToTransakNetworkId: { [id: number]: string } = {
@@ -133,6 +140,7 @@ export const chainIdToTransakNetworkId: { [id: number]: string } = {
   [OnRampChainId.LINEA]: 'linea',
   [OnRampChainId.BASE]: 'base',
   [OnRampChainId.BTC]: 'mainnet',
+  [OnRampChainId.ETHERLINK_TESTNET]: 'Etherlink',
 }
 
 export const combinedNetworkIdMap: {
@@ -226,6 +234,7 @@ export const onRampCurrencies: OnRampCurrency[] = [
   baseTokens.usdc,
   ethereumTokens.dai,
   ethereumTokens.wbtc,
+  etherlinkTestnetTokens.usdt,
   // arbitrumTokens.usdce,
 ]
 
@@ -248,5 +257,6 @@ export const onRampCurrenciesMap: { [tokenSymbol: string]: Currency } = {
   USDC_8453: baseTokens.usdc,
   DAI_1: ethereumTokens.dai,
   WBTC_1: ethereumTokens.wbtc,
+  etherlinkTestnetTokens.usdt,
   // 'USDC.e_42161': arbitrumTokens.usdce,
 }
