@@ -35,5 +35,5 @@ export const tradingRewardPairConfigChainMap: Record<FarmV3SupportedChainId, Com
   [ChainId.BASE]: [...baseFarm, ...tradingRewardBaseV3Pair],
   [ChainId.OPBNB_TESTNET]: opBNBTestnetFarms,
   [ChainId.OPBNB]: opBNBFarms,
-  [ChainId.ETHERLINK_TESTNET]: etherlinkTestnetFarm,
+  [ChainId.ETHERLINK_TESTNET]: [...etherlinkTestnetFarm, ...tradingRewardEtherlinkTestnetV3Pair],
 }
