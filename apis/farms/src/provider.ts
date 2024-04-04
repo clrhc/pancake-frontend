@@ -117,12 +117,12 @@ const etherlinkTestnet = {
   nativeCurrency: { name: 'Etherlink Testnet', symbol: 'XTZ', decimals: 18 },
   rpcUrls: {
     default: {
-      http: ['https://rpc.linea.build'],
-      webSocket: ['wss://rpc.linea.build'],
+      http: ['https://node.ghostnet.etherlink.com/'],
+      webSocket: ['wss://node.ghostnet.etherlink.com/'],
     },
     public: {
-      http: ['https://rpc.linea.build'],
-      webSocket: ['wss://rpc.linea.build'],
+      http: ['https://node.ghostnet.etherlink.com/'],
+      webSocket: ['wss://node.ghostnet.etherlink.com/'],
     },
   },
   blockExplorers: {
