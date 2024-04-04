@@ -59,7 +59,7 @@ export const priceHelperTokens = {
   },
   [ChainId.ETHERLINK_TESTNET]:{
     chain: 'etherlink',
-    list: [etherlinkTestnetTokens.xtz, etherlinkTestnetTokens.wxtz, etherlinkTestnetTokens.eusd, etherlinkTestnetTokens.usdt, etherlinkTestnetTokens.ign, etherlinkTestnetTokens.usdc, etherlinkTestnetTokens.tzbtc],
+    list: [etherlinkTestnetTokens.wxtz, etherlinkTestnetTokens.eusd, etherlinkTestnetTokens.usdt, etherlinkTestnetTokens.ign, etherlinkTestnetTokens.usdc, etherlinkTestnetTokens.tzbtc],
   },
 } satisfies Record<number, PriceHelper>
 
